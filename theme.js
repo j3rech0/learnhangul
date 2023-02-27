@@ -1,0 +1,19 @@
+export const darkTheme = {
+  PRIMARY_COLOR: "#16161D",
+  TEXT_COLOR: "#5BECC0",
+  ACTIVE_COLOR: "#1E1E1E",
+  INACTIVE_COLOR: "#929292",
+  TOGGLE_ICON: "moon",
+  BUTTON_BG_COLOR: "#5BECC0",
+  BORDER_TOP: "#121218",
+  TOGGLE_ICON_COLOR: "#ee8181",
+};
+export const lightTheme = {
+  PRIMARY_COLOR: "#EBFDFE",
+  TEXT_COLOR: "#1E1E1E",
+  ACTIVE_COLOR: "#1E1E1E",
+  INACTIVE_COLOR: "#929292",
+  TOGGLE_ICON: "sun",
+  BUTTON_BG_COLOR: "#16161D",
+  BORDER_TOP: "#e9e9e9",
+};

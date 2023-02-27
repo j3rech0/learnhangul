@@ -1,20 +1,45 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { ThemeProvider } from "styled-components/native";
+import { Container, ThemeButton, FlexInline, ToggleButtonSVG } from "./style";
+import Header from "./src/components/Header";
+import Tab from "./src/navigation/Tab";
+import { darkTheme, lightTheme } from "./src/constants";
+import { StatusBar } from "expo-status-bar";
 
 export default function App() {
+  const [theme, setTheme] = useState("dark");
+
+  const toggleTheme = async () => {
+    const themeValue = theme === "dark" ? "light" : "dark";
+    setTheme(themeValue);
+  };
+
+  const NavTheme = theme === "light" ? lightTheme : darkTheme;
+  const ExtendTheme = {
+    colors: {
+      ...NavTheme,
+    },
+  };
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+      <Container>
+        <FlexInline>
+          <Header />
+          <ThemeButton
+            onPress={() => {
+              toggleTheme();
+            }}
+          >
+            <ToggleButtonSVG size={24} />
+          </ThemeButton>
+        </FlexInline>
+        <NavigationContainer theme={ExtendTheme}>
+          <Tab />
+        </NavigationContainer>
+        <StatusBar style="light" />
+      </Container>
+    </ThemeProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
