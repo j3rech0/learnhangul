@@ -3,7 +3,7 @@
 Simple app for Korean alphabet (Hangul). 
 
 
-![](./screenshot.png)
+![](./screenshot.jpg)
 
 
 
