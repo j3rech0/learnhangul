@@ -77,9 +77,9 @@ export const CardItem = styled.Text((props) => ({
   fontSize: props.fontSize || "20px",
   fontFamily: "NotoSerifKR",
   color: props.theme["TEXT_COLOR"],
-  height: 70,
   display: "flex",
-  alignItems: "center",
+  paddingTop: 10,
+  paddingBottom: 10,
 }));
 
 export const GridContainer = styled.View((props) => ({

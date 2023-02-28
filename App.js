@@ -6,9 +6,11 @@ import Header from "./src/components/Header";
 import Tab from "./src/navigation/Tab";
 import { darkTheme, lightTheme } from "./src/constants";
 import { StatusBar } from "expo-status-bar";
+import { useColorScheme } from "react-native";
 
 export default function App() {
-  const [theme, setTheme] = useState("dark");
+  const scheme = useColorScheme();
+  const [theme, setTheme] = useState(scheme);
 
   const toggleTheme = async () => {
     const themeValue = theme === "dark" ? "light" : "dark";
@@ -24,7 +26,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-      <Container>
+      <Container> 
         <FlexInline>
           <Header />
           <ThemeButton
