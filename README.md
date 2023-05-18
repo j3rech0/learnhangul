@@ -1,11 +1,6 @@
-# LearnHangul
+# LearnHangul (In progress..)
 
-Simple app for Korean alphabet (Hangul). 
-
-
-![](./screenshot.jpg)
-
-
+An easy-to-use app designed for learning the Korean alphabet, also known as Hangul.
 
 ### Built with
 
@@ -15,15 +10,20 @@ Simple app for Korean alphabet (Hangul).
 - [React Navigation](https://reactnavigation.org/)
 
 ### To do:
+
 - randomize the alphabet
 - add ability to save changes
 - ...
 
-
-
 ### Author
 
--  [Jech](https://jerecho.com/)
+- [Jech](https://jerecho.com/)
 
+## Screenshots
 
-
+<details>
+	<summary>View screenshots</summary>
+<p align="left">
+  <img src="./screenshot.jpg"  />
+</p>
+</details>
